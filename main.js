@@ -1,7 +1,11 @@
-var cellPerSide = 100;
+let cellPerSide = prompt("Enter the width of the grid in number of cells", '40');
+var containerWidth = 960;
+var containerHeight = 960;
+
 const container = document.querySelector('.container');
-container.setAttribute('style', 'display: flex; flex-direction: column; gap: 0px; width: 960px; margin: auto; border: 3px solid black');
-const containerWidth = Number(container.style.width.slice(0,-2));
+
+container.setAttribute('style', `display: flex; flex-direction: column; gap: 0px; width: ${containerWidth}px; height: ${containerHeight}px; margin: auto; border: 3px solid black`);
+
 const cellWidth = containerWidth / cellPerSide;
 
 function createGrid(cells) {
