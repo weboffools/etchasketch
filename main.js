@@ -1,10 +1,11 @@
-var cellPerSide = 16;
+var cellPerSide = 100;
 const container = document.querySelector('.container');
-container.setAttribute('style', 'width: 960px; margin: auto; border: 3px solid black');
+container.setAttribute('style', 'display: flex; flex-direction: column; gap: 0px; width: 960px; margin: auto; border: 3px solid black');
 const containerWidth = Number(container.style.width.slice(0,-2));
 const cellWidth = containerWidth / cellPerSide;
 
 function createGrid(cells) {
+  container.replaceChildren();
   for (let i = 0; i < cells; i++) {
     const rowDiv = document.createElement('div');
     rowDiv.classList.add(`row-${i}`);
