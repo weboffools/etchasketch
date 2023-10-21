@@ -1,0 +1,23 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  box-sizing: border-box;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body {
+  min-height: 100vh;
+}
+
+.createGridBtn {
+  border: 4px solid skyblue;
+  background-color: wheat;
+  padding: 10px;
+  margin: 24px;
+}
+
+
+
