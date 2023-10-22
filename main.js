@@ -7,18 +7,18 @@ container.setAttribute('style', `display: flex; flex-direction: column; gap: 0px
 
 
 
-function createGrid(cells) {
+function createGrid() {
 
   let cellPerSide = prompt("Enter the width of the grid in number of cells", '16');
   const cellWidth = containerWidth / cellPerSide;
   container.replaceChildren();
-  for (let i = 0; i < cells; i++) {
+  for (let i = 0; i < cellPerSide; i++) {
     const rowDiv = document.createElement('div');
     rowDiv.classList.add(`row-${i}`);
     rowDiv.setAttribute('style', `display: inline-flex; height: ${cellWidth}px; margin: 0;`);
     container.appendChild(rowDiv);
 
-    for (let j = 0; j < cells; j++) {
+    for (let j = 0; j < cellPerSide; j++) {
       let thisRow = document.querySelector(`.row-${i}`);
       const btn = document.createElement('button');
       btn.classList.add('cellbtn');
@@ -34,7 +34,7 @@ function eventHandler() {
 
     buttons.forEach((button) => {
       button.addEventListener('mouseover', function (e) {
-        e.target.style.backgroundColor = 'black';
+        e.target.style.backgroundColor = 'red';
       });
     });
 }
